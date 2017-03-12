@@ -1,0 +1,14 @@
+﻿[Unit]
+Description=fcoupon .NET Web API Application running on Ubuntu
+
+[Service]
+WorkingDirectory=/opt/fcoupon
+ExecStart=/usr/bin/dotnet /opt/fcoupon/fcoupon.dll
+Restart=always
+RestartSec=10    # Restart service after 10 seconds if dotnet service crashes
+SyslogIdentifier=fcoupon-dotnetcore
+User=www-data
+Environment=ASPNETCORE_ENVIRONMENT=Production 
+
+[Install]
+WantedBy=multi-user.target

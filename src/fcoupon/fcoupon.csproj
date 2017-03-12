@@ -70,10 +70,13 @@
     <Folder Include="Controllers\" />
     <Folder Include="Services\" />
     <Folder Include="Models\" />
+    <Folder Include="infra\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Dockerfile" />
     <None Include="appsettings.json" />
+    <None Include="infra\kestrel-fcoupon.service" />
+    <None Include="infra\fcoupon-supervisor.conf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
